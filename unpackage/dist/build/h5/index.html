@@ -1,0 +1,14 @@
+<!DOCTYPE html><html><head><meta http-equiv=Content-Type content="text/html;charset=utf-8"><title>Chapter 1. First WebGL Demo</title><script id=vertex-shader type=x-shader/x-vertex>attribute vec4 vPosition;
+			varying vec4 vColor;
+			attribute vec4 aColor;
+			void main(){
+				gl_Position = vPosition;
+				vColor = aColor;
+			}</script><script id=fragment-shader type=x-shader/x-fragment>precision mediump float;
+			varying vec4 vColor;
+			void main(){
+				gl_FragColor =  vColor;
+			}</script><script id=fragment2-shader type=x-shader/x-fragment>precision mediump float;
+		            void main(){
+		                gl_FragColor = vec4( 0.5, 0.7, 0.2, 0.6 );
+		            }</script><script src=../js/common/webgl-utils.js></script><script src=../js/common/initShaders.js></script><script src=../js/common/glMatrix-0.9.5.min.js></script><script src=../js/ch01/triangle.js></script></head><body><canvas id=triangle-canvas style=border:none; width=500 height=500></canvas><script src=./static/js/chunk-vendors.9de2da3e.js></script><script src=./static/js/index.ce92b893.js></script></body></html>
